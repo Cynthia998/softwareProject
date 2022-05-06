@@ -12,13 +12,14 @@
   .navbar 
   {
       margin-bottom: 0;
-      background-color: #f4511e;
+      background-color: #c02e2b;
       z-index: 9999;
       border: 0;
       font-size: 12px !important;
       line-height: 1.42857143 !important;
       letter-spacing: 4px;
       border-radius: 0;
+      position: relative;
   }
 
   .navbar li a, .navbar .navbar-brand 
@@ -28,7 +29,7 @@
 
   .navbar-nav li a:hover, .navbar-nav li.active a 
   {
-      color: #f4511e !important;
+      color: #c02e2b !important;
       background-color: #fff !important;
   }
 
@@ -54,6 +55,17 @@
   {
     background-color: #c02e2b;
   }
+.carousel .item 
+{
+  height: 400px;
+}
+.item img 
+{
+  position: relative;
+  top: 0;
+  left: 0;
+  min-height: 400px;
+}
 .item h4 
 {
   font-size: 19px;
@@ -69,7 +81,7 @@
 </style>
 
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar sticky-top navbar-light bg-light">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -77,7 +89,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="#">
+          AAC
+        </a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
@@ -133,6 +147,7 @@
         <p><b>FIGlets </b> - 6pm to 7:30pm Fridays</p>
         <p>For Chinese speakers:</p>
       <br>
+      <h2>Announcements</h2>
       <button class="btn btn-default btn-lg">Get in Touch</button>
     </div>
   </div>	
