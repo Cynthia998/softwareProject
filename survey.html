@@ -8,71 +8,136 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+<style>
+  .survey
+  {
+    padding: 10px;
+  }
+  .card-header
+  {
+    background-color: #c02e2b;
+  }
+  #label
+  {
+    color: #fff;
+  }
+  .button 
+  {
+    background-color: #d6b183;
+    color: black;
+    border: #fff;
+  }
+</style>
 
 <body>
-    <div class="mx-0 mx-sm-auto">
-        <div class="card">
-          <div class="card-header bg-primary" style="height: 50px;">
-            <h1 class="card-title text-white mt-2 text-center" id="exampleModalLabel">Survey</h1>
-          </div>
-          <div class="modal-body">
-            <div class="text-center">
-              <i class="far fa-file-alt fa-4x mb-3 text-primary"></i>
-              <p>
-                <strong>Your information can enables us to help you on your journey</strong>
-              </p>
-            </div>
-      
-            <hr />
-      
-            <form class="px-4" action="">
-              <p><strong>How did you come to know about our church?</strong></p>
-      
-              <div class="form-check mb-2">
-                <input class="form-check-input" type="checkbox" name="exampleForm" id="radio3Example1" />
-                <label class="form-check-label" for="radio3Example1">
-                  Very good
-                </label>
-              </div>
-              <div class="form-check mb-2">
-                <input class="form-check-input" type="checkbox" name="exampleForm" id="radio3Example2" />
-                <label class="form-check-label" for="radio3Example2">
-                  Good
-                </label>
-              </div>
-              <div class="form-check mb-2">
-                <input class="form-check-input" type="checkbox" name="exampleForm" id="radio3Example3" />
-                <label class="form-check-label" for="radio3Example3">
-                  Medicore
-                </label>
-              </div>
-              <div class="form-check mb-2">
-                <input class="form-check-input" type="checkbox" name="exampleForm" id="radio3Example4" />
-                <label class="form-check-label" for="radio3Example4">
-                  Bad
-                </label>
-              </div>
-              <div class="form-check mb-2">
-                <input class="form-check-input" type="checkbox"type="radio" name="exampleForm" id="radio3Example5" />
-                <label class="form-check-label" for="radio3Example5">
-                  Very bad
-                </label>
-              </div>
-
-              <br>
-      
-              <p><strong>What could we improve?</strong></p>
-      
-              <!-- Message input -->
-              <div class="form-outline mb-4">
-                <textarea class="form-control" id="form4Example3" rows="4"></textarea>
-                <label class="form-label" for="form4Example3">Your feedback</label>
-              </div>
-            </form>
-          </div>
-          <div class="card-footer text-end">
-            <button type="button" class="btn btn-primary">Submit</button>
-          </div>
+  <div class="card">
+  <div class="card-header" style="height: 50px;">
+    <h1 class="card-title mt-2 text-center" id="label">Survey</h1>
+  </div>
+  <div class="survey">
+      <div class="modal-body">
+        <div class="text-center">
+          <p>
+            <strong>Your information can enables us to help you on your journey</strong>
+          </p>
         </div>
+        <form action="">
+          <p><strong>Name:</strong></p>
+          <p><strong>Address:</strong></p>
+          <p><strong>Phone number:</strong></p>
+          <p><strong>Select your age group:</strong></p>
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" name="Form" id="radio1" />
+            <label class="form-check-label" for="radio3Example1">
+              16 or under
+            </label>
+          </div>
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" name="Form" id="radio2" />
+            <label class="form-check-label" for="radio3Example2">
+              17-24
+            </label>
+          </div>
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" name="Form" id="radio3" />
+            <label class="form-check-label" for="radio3Example3">
+              25-30
+            </label>
+          </div>
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" name="Form" id="radio3" />
+            <label class="form-check-label" for="radio3Example3">
+              31-40
+            </label>
+          </div>
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" name="Form" id="radio3" />
+            <label class="form-check-label" for="radio3Example3">
+              41 or above
+            </label>
+          </div>
+          <br>
+          <p><strong>Please tick the appropriate boxes:</strong></p>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" name="Form" id="radio1" />
+              <label class="form-check-label" for="radio3Example1">
+                I am interested in becoming a Christian
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" name="Form" id="radio2" />
+              <label class="form-check-label" for="radio3Example2">
+                I am interested in finding out more about Christianity
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" name="Form" id="radio3" />
+              <label class="form-check-label" for="radio3Example3">
+               I am just visiting
+              </label>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" name="Form" id="radio3" />
+                <label class="form-check-label" for="radio3Example3">
+                I am seeking a church home
+                </label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" name="Form" id="radio3" />
+                <label class="form-check-label" for="radio3Example3">
+                I am interested in joining a Bible study group
+                </label>
+              </div>
+            </div>
+          <br>
+          <p><strong>Who/what invited you to church?</strong></p>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" name="Form" id="radio1" />
+              <label class="form-check-label" for="radio3Example1">
+                Friends
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" name="Form" id="radio2" />
+              <label class="form-check-label" for="radio3Example2">
+                Leaflets
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" name="Form" id="radio3" />
+              <label class="form-check-label" for="radio3Example3">
+                Social media
+              </label>
+            </div>
+          <br>
+          <p><strong>Any feedback?</strong></p>
+          <div class="form-outline mb-4">
+            <textarea class="form-control" id="form4Example3" rows="4"></textarea>
+          </div>
+        </form>
       </div>
+      <div class="card-footer text-end">
+        <button type="button" class="button">Submit</button>
+      </div>
+  </div>
+  </div>
 </body>
