@@ -1,3 +1,4 @@
+<!--Modified by Cynthia Lai 10/05/2022--> 
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,58 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
   </head>
-  <style>
-    .body {
-      background-color: #fff;
-    }
-    .card {
-      width: 400px;
-      border: none;
-    }
-    .btr {
-      border-top-right-radius: 5px !important;
-    }
-    .btl {
-      border-top-left-radius: 5px !important;
-    }
-    .btn{
-      color: #fff;
-      background-color: #d6b183;
-      border-color: #d6b183;
-    }
-    .btn:hover {
-      color: #fff;
-      background-color: #c02e2b;
-      border-color: #c02e2b;
-    }
-    .nav-pills {
-      display: table !important;
-      width: 100%;
-    }
-    .nav-pills .nav-link {
-      border-radius: 0px;
-      border-bottom: 1px solid #c02e2b;
-    }
-    .nav-item {
-      display: table-cell;
-      background: #c02e2b;
-    }
-    .form {
-      padding: 10px;
-      height: 300px;
-    }
-    .form input {
-      margin-bottom: 12px;
-      border-radius: 3px;
-    }
-    .form input:focus {
-      box-shadow: none;
-    }
-    .form button {
-      margin: 20px;
-    }
-  </style>
   <body>
     <div class="d-flex justify-content-center align-items-center mt-5">
       <div class="card">
@@ -80,10 +31,9 @@
           </div>
           <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="choose-register">
             <div class="form px-4 pt-5">
-              <input type="text" name="" class="form-control" placeholder="Name">
-              <input type="text" name="" class="form-control" placeholder="Email">
-              <input type="text" name="" class="form-control" placeholder="Phone">
-              <input type="text" name="" class="form-control" placeholder="Password">
+              <input type="text" id="name" class="form-control" placeholder="Name">
+              <input type="text" id="email" class="form-control" placeholder="Email">
+              <input type="password" id="pwd" class="form-control" placeholder="Password">
               <button class="btn btn-block">Signup</button>
             </div>
           </div>
