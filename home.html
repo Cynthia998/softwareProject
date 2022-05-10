@@ -1,3 +1,4 @@
+<!--Modified by Cynthia Lai 10/05/2022--> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <style>
+
+  .content
+  {
+    align-content: left;
+  }
   .navbar 
   {
       margin-bottom: 0;
@@ -37,10 +43,6 @@
   {
       border-color: transparent;
       color: #fff !important;
-  }
-  .container-fluid
-  {
-    padding: 60px 50px;
   }
   .carousel-control.right, .carousel-control.left 
   {
@@ -73,6 +75,7 @@
 </style>
 
 <body>
+  <div class="container-fluid">
   <nav class="navbar sticky-top navbar-light bg-light">
     <div class="container">
       <div class="navbar-header">
@@ -95,58 +98,70 @@
       </div>
     </div>
   </nav>
-  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">  
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="https://images.unsplash.com/photo-1651483554034-8defec113cf2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="Los Angeles" class="d-block" style="width:100%">
-        <div class="carousel-caption">
-          <h3>Los Angeles</h3>
-          <p>We had such a great time in LA!</p>
+
+  <div class="content">
+    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">  
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="https://images.unsplash.com/photo-1651483554034-8defec113cf2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="Los Angeles" class="d-block" style="width:100%">
+          <div class="carousel-caption">
+            <h3>Los Angeles</h3>
+            <p>We had such a great time in LA!</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1651592753269-7d661e4a9899?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="Chicago" class="d-block" style="width:100%">
+          <div class="carousel-caption">
+            <h3>Chicago</h3>
+            <p>Thank you, Chicago!</p>
+          </div> 
+        </div>
+    
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  
+  <div class="container-fluid">
+    <div class="row mx-auto d-block" style="text-align: left;">
+      <div class="col-sm-6">
+          <h2>Our Sunday services</h2>
+            <p>We meet every Sunday at:</p>
+            <p>Senior Citizens & Community Centre 91 Queens Road, Hurstville</p>
+            <p><b>4:00pm:</b> Mandarin service (fun toddlers and kids program run at same time)</p>
+            <p><b>5:30pm:</b> English service</p>
+          <br>
+          <h2>Our bible study groups</h2>
+            <p><b>For English speakers:</b></p>
+            <p>Wednesday group- 7:30pm Wednesdays (Contact: Elvin <u>elvinhong@gmail.com</u>)</p>
+            <p>Youth group - 6pm Fridays (Contact: Kai <u>kaih0997@gotmail.com</u>)</p>
+            <p><b>For Chinese speakers:</b></p>
+            <p>Sunday group - 5:30pm Sundays (Contact: Roy <u>hurry9@gmail.com</u>)</p>
+            <p>Ladies group - 10:00am Tuesdays (Contact: Joyce <u>mikejoycelee@gmail.com</u>)</p>
+            <p>Tuesday group - 7:30pm Tuesdays (Contact: Elvin <u>elvinhong@gmail.com</u>)</p>
+          <br>
+          <h2>Events</h2>
+          <p><b>EASTER MINI GETAWAY</b></p>
+          <p>AAC are inviting you to enjoy the fantastic time during Easter with us, discovering the hope Easter brings from God’s Word. Includes bible talks, workshops, fun beach and outdoors activities, fabulous Talent Show and more!</p>
+          <p>Please register through the link below.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeYASEQXZsnOgZuay3wpA0kLB1DUWmjXodjQ1aeSvDk2AYrvA/viewform?usp=sf_link" class="link-primary">Registeration form</a>
+      </div>
+      <div class="col-sm-6">
+        <div class="image">
+          <img class="d-block" src="AAC-Easter-Mini-Getaway-2022-by-10-Apr-EN.png" style="width: 70%; height: auto;">
         </div>
       </div>
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1651592753269-7d661e4a9899?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="Chicago" class="d-block" style="width:100%">
-        <div class="carousel-caption">
-          <h3>Chicago</h3>
-          <p>Thank you, Chicago!</p>
-        </div> 
       </div>
-  
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    </div>	
   </div>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-8">
-      <h2>Our Sunday services</h2>
-        <p>We meet every Sunday at:<p>
-        <p>Senior Citizens & Community Centre 91 Queens Road, Hurstville</p>
-        <p><b>4:00pm:</b> Mandarin service (fun toddlers and kids program run at same time)</p>
-        <p><b>5:30pm:</b> English service</p>
-      <br>
-      <h2>Our bible study groups</h2>
-        <p><b>For English speakers:</b></p>
-        <p>Wednesday group- 7:30pm Wednesdays (Contact: Elvin <u>elvinhong@gmail.com</u>)</p>
-        <p>Youth group - 6pm Fridays (Contact: Kai <u>kaih0997@gotmail.com</u>)</p>
-        <p><b>For Chinese speakers:</b></p>
-        <p>Sunday group - 5:30pm Sundays (Contact: Roy <u>hurry9@gmail.com</u>)</p>
-        <p>Ladies group - 10:00am Tuesdays (Contact: Joyce <u>mikejoycelee@gmail.com</u>)</p>
-        <p>Tuesday group - 7:30pm Tuesdays (Contact: Elvin <u>elvinhong@gmail.com</u>)</p>
-      <br>
-      <h2>Announcements</h2>
-      <button class="btn btn-default btn-lg">Get in Touch</button>
-    </div>
-  </div>	
+  </div>
 </div>
-
 </body>
 </html>
