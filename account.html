@@ -1,71 +1,192 @@
 <!--Modified by Cynthia Lai 10/05/2022-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>Account</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="css/styles.css" />
-</head>
-
-<body class="accountPage">
-<div class="form">
-<div class="row mx-auto d-block">
-		<div class="col-12">
-			<!-- Page title -->
-			<div class="my-5">
-				<h3>My Profile</h3>
-				<hr>
-			</div>
-			<!-- Form START -->
-			<form class="file-upload">
-				<div class="col-md-6">
-					<!-- Contact detail -->
-					<div class="col-xxl-8 mb-5 mb-xxl-0">
-						<div class="bg-secondary-soft px-4 py-5 rounded">
-							<div class="row g-3">
-								<h4 class="mb-4 mt-0">Contact detail</h4>
-									<label class="form-label">First Name</label>
-									<input type="text" class="form-control">
-                                    <label class="form-label">Last Name</label>
-									<input type="text" class="form-control">
-                                    <label class="form-label">Mobile number</label>
-									<input type="text" class="form-control">
-                                    <label for="inputEmail4" class="form-label">Email</label>
-									<input type="email" class="form-control" id="updateEmail">
-						    </div>
-					    </div>
-				    </div>
+  <head>
+    <title>Account</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  </head>
+  <body class="accountPage">
+    <div class="container">
+      <div class="form">
+        <div class="row mx-auto d-block">
+          <div class="col-12">
+            <!-- Page title -->
+            <div class="my-5">
+              <h3>My Profile</h3>
+              <hr>
+            </div>
+            <!-- Form START -->
+            <form class="file-upload">
+              <div class="col-md-6">
+                <!-- Contact detail -->
+                <div class="col-xxl-8 mb-5 mb-xxl-0">
+                  <div class="bg-secondary-soft px-4 py-5 rounded">
+                    <div class="row g-3">
+                      <h4 class="mb-4 mt-0">Contact detail</h4>
+                      <label class="form-label">First Name</label>
+                      <input type="text" class="form-control">
+                      <label class="form-label">Last Name</label>
+                      <input type="text" class="form-control">
+                      <label class="form-label">Mobile number</label>
+                      <input type="text" class="form-control">
+                      <label for="inputEmail4" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="updateEmail">
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <!-- Social media detail -->
+              <div class="row mb-5 gx-5">
+                <!-- change password -->
+                <div class="col-md-6">
+                  <div class="bg-secondary-soft px-4 py-5 rounded">
+                    <div class="row g-3">
+                      <h4 class="my-4">Change Password</h4>
+                      <!-- Old password -->
+                      <label for="exampleInputPassword1" class="form-label">Old password</label>
+                      <input type="password" class="form-control" id="old-psw">
+                      <label for="exampleInputPassword2" class="form-label">New password</label>
+                      <input type="password" class="form-control" id="new-pswd">
+                      <label for="exampleInputPassword3" class="form-label">Confirm Password</label>
+                      <input type="password" class="form-control" id="confirm-psw">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Row END -->
+              <!-- button -->
+              <div class="gap-3 d-md-flex justify-content-md-end text-center">
+                <button type="button" class="form-control btn btn-update">Update</button>
+              </div>
+            </form>
+            <!-- Form END -->
+          </div>
 
-				<!-- Social media detail -->
-				<div class="row mb-5 gx-5">
-					<!-- change password -->
-					<div class="col-md-6">
-						<div class="bg-secondary-soft px-4 py-5 rounded">
-							<div class="row g-3">
-								<h4 class="my-4">Change Password</h4>
-								<!-- Old password -->
-									<label for="exampleInputPassword1" class="form-label">Old password</label>
-									<input type="password" class="form-control" id="old-psw">
-                                    <label for="exampleInputPassword2" class="form-label">New password</label>
-									<input type="password" class="form-control" id="new-pswd">
-                                    <label for="exampleInputPassword3" class="form-label">Confirm Password</label>
-									<input type="password" class="form-control" id="confirm-psw">
-							</div>
-						</div>
-					</div>
-				</div> <!-- Row END -->
-				<!-- button -->
-				<div class="gap-3 d-md-flex justify-content-md-end text-center">
-					<button type="button" class="form-control btn btn-update">Update</button>
+		  <div class="my-5">
+			<h3>Survey</h3>
+			<hr>
+		  </div>
+		  <!-- Form START -->
+		  <form class="survey" action="">
+			<p><b>Name:</b></p>
+			<input type="text" class="form-control" id="name">
+			<br>
+			<p><b>Address:</b></p>
+			<input type="text" class="form-control" id="address" >
+			<br>
+			<p><b>Phone number:</b></p>
+			<input type="tel" class="form-control" id="phone-number">
+			<br>
+			<p><b>Select your age group:</b></p>
+			<div class="form-check mb-2">
+			  <input class="form-check-input" type="checkbox" name="Form" id="radio1" />
+			  <label class="form-check-label" for="radio1">
+				16 or under
+			  </label>
+			</div>
+			<div class="form-check mb-2">
+			  <input class="form-check-input" type="checkbox" name="Form" id="radio2" />
+			  <label class="form-check-label" for="radio2">
+				17-24
+			  </label>
+			</div>
+			<div class="form-check mb-2">
+			  <input class="form-check-input" type="checkbox" name="Form" id="radio3" />
+			  <label class="form-check-label" for="radio3">
+				25-30
+			  </label>
+			</div>
+			<div class="form-check mb-2">
+			  <input class="form-check-input" type="checkbox" name="Form" id="radio4" />
+			  <label class="form-check-label" for="radio4">
+				31-40
+			  </label>
+			</div>
+			<div class="form-check mb-2">
+			  <input class="form-check-input" type="checkbox" name="Form" id="radio5" />
+			  <label class="form-check-label" for="radio5">
+				41 or above
+			  </label>
+			</div>
+			<br>
+			<p><strong>Please tick the appropriate boxes:</strong></p>
+			  <div class="form-check mb-2">
+				<input class="form-check-input" type="checkbox" name="Form" id="radio1" />
+				<label class="form-check-label" for="radio1">
+				  I am interested in becoming a Christian
+				</label>
+			  </div>
+			  <div class="form-check mb-2">
+				<input class="form-check-input" type="checkbox" name="Form" id="radio2" />
+				<label class="form-check-label" for="radio2">
+				  I am interested in finding out more about Christianity
+				</label>
+			  </div>
+			  <div class="form-check mb-2">
+				<input class="form-check-input" type="checkbox" name="Form" id="radio3" />
+				<label class="form-check-label" for="radio3">
+				 I am just visiting
+				</label>
+				<div class="form-check mb-2">
+				  <input class="form-check-input" type="checkbox" name="Form" id="radio4" />
+				  <label class="form-check-label" for="radio4">
+				  I am seeking a church home
+				  </label>
 				</div>
-			</form> <!-- Form END -->
+				<div class="form-check mb-2">
+				  <input class="form-check-input" type="checkbox" name="Form" id="radio5" />
+				  <label class="form-check-label" for="radio5">
+				  I am interested in joining a Bible study group
+				  </label>
+				</div>
+			  </div>
+			<br>
+			<p><strong>Who/what invited you to church?</strong></p>
+			  <div class="form-check mb-2">
+				<input class="form-check-input" type="checkbox" name="Form" id="radio1" />
+				<label class="form-check-label" for="radio1">
+				  Friends
+				</label>
+			  </div>
+			  <div class="form-check mb-2">
+				<input class="form-check-input" type="checkbox" name="Form" id="radio2" />
+				<label class="form-check-label" for="radio2">
+				  Leaflets
+				</label>
+			  </div>
+			  <div class="form-check mb-2">
+				<input class="form-check-input" type="checkbox" name="Form" id="radio3" />
+				<label class="form-check-label" for="radio3">
+				  Social media
+				</label>
+			  </div>
+			  <div class="form-outline mb-4">
+				<input class="form-check-input" type="checkbox" name="Form" id="radio3" />
+				<label class="form-check-label" for="radio3">
+				  Other:
+				</label>
+				<textarea class="form-control" id="feedbackS" rows="2"></textarea>
+			  </div>
+			<br>
+			<p><strong>Any feedback?</strong></p>
+			<div class="form-outline mb-4">
+			  <textarea class="form-control" id="feedbackS" rows="4"></textarea>
+			</div>
+			<br>
+			<div class="gap-3 d-md-flex justify-content-md-end text-center">
+                <button type="button" class="form-control btn btn-submit">Submit</button>
+            </div>
+		  </form>
+		  <!-- Form END -->
 		</div>
-	</div>
-	</div>
-</body>
+
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
