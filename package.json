@@ -4,11 +4,13 @@
   "description": "A website for AAC",
   "main": "softwareProject/js/index.js",
   "scripts": {
+    "dev": "nodemon ./js/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Cynthia Lai",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
   }
 }

@@ -1,15 +1,32 @@
-const http = require('http');
-const { readFile } = require('fs');
- 
+const express = require("express");
+const fs = require("fs");
+const path = require("path");
 
-http.createServer((req, res) => {
-    readFile("./home.html", function (err, data) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.setHeader("Content-Type", "text/html");
-            res.writeHead(200);
-            res.end(data);
+const app = express();
+const port = process.env.PORT | "8080";
+const parentDirectory = path.resolve(__dirname, '..');
+
+app.use(express.static(parentDirectory));
+
+fs.readdir(parentDirectory, (err, files) => {
+    if (err) {
+        console.log(`Could not list directory: ${parentDirectory}`);
+        process.exit(1);
+    }
+
+    files.forEach((file, _index) => {
+        if (/.*\.html/.test(file)) {
+            let f = file.split('.')[0];
+            
+            app.get(`/${f}`, (req, res) => {
+                res.status(200).sendFile(path.join(parentDirectory, file));
+            });
         }
-    })
-}).listen(5000);
+    });
+});
+
+app.get("/", (_req, res) => {
+    res.redirect("/home");
+});
+
+app.listen(port, () => console.log(`Listening on port ${port}`));

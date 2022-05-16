@@ -37,18 +37,25 @@
   
   <div class="container-fluid text-center">
     <h1 class="text-left">Past sermon recordings</h1>
-    <form class="form-inline">
+    <form class="form-inline" target="_self">
       <div class="input-group">
-        <input type="search" class="form-control" size="1000" placeholder="Sermon name or date" required>
+        <input type="search" name="query" class="form-control" size="1000" placeholder="Sermon name or date" required>
         <div class="input-group-btn">
-          <button type="button" class="btn btn-danger">Search</button>
+          <button type="submit" class="btn btn-danger">Search</button>
         </div>
       </div>
     </form>
   </div>
+
+  <script>
+
+    $(".form-inline").submit((_d) => {
+      const data = _d.serialize();
+
+      console.log(data);
+    }, (err) => console.log(err));
+
+  </script>
 </div>
-
-
 </body>
-
 </html>
