@@ -35,13 +35,11 @@
 }
 .carousel .item 
 {
-  height: 400px;
+  height: 600px;
 }
 .item img 
 {
-  position: relative;
-  top: 0;
-  left: 0;
+  position: absolute;
   min-height: 400px;
 }
 .item h4 
