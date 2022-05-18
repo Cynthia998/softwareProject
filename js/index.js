@@ -9,7 +9,7 @@ const parentDirectory = path.resolve(__dirname, '..');
 app.use(express.static(parentDirectory));
 
 fs.readdir(parentDirectory, (err, files) => {
-    if (err) {
+    if (err) {w
         console.log(`Could not list directory: ${parentDirectory}`);
         process.exit(1);
     }

@@ -248,3 +248,23 @@
   background-color: #d5a778;
   border-color: #d5a778;
 }
+
+/* cancel button */
+.cancel
+{
+  background-color: #c02e2b;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+.cancel:hover,
+.cancel:focus 
+{
+  color: #fff;
+  background-color: #c02e2b;
+  border-color: #c02e2b;
+}
