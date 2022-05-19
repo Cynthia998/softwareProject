@@ -3,7 +3,7 @@ const mongo = require("mongodb");
 const path = require("path");
 
 /* INSERT YOUR MONGODB LINK */
-const uri = "mongodb+srv://sn1p3r:Lazystamp57@howdoesthiswork.p7dya.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://3cinnamon12:Aac-1995@aac.kkvbf.mongodb.net/?retryWrites=true&w=majority";
 const client = mongo.MongoClient;
 const grid = mongo.GridFSBucket;
 
@@ -11,7 +11,7 @@ client.connect(uri, (err, database) => {
     if (err) throw err;
 
     /* INSERT YOUR DATABASE */
-    const db = database.db("sample_airbnb");
+    const db = database.db("sermons");
     const gridfs = new grid(db);
 
     fs.readdir('./', (error, files) => {
@@ -49,5 +49,11 @@ function uploadFile (gfs, _path) {
                 return reject(`Failed to upload file`);
             }
         });
+        const filename = buf.toString('hex') + path.extname(file.originalname);
+        const fileInfo = {
+            filename: "C:\Users\cynth\Desktop\sermons\EN\1Thessalonians\20160911-1Thess5.1-11_The_day_of_the_Lord-EN.mp3",
+            db: 'sermons',
+            metadata: '2016 Thessalonians: The day of the Lord'
+        };
     });
 }

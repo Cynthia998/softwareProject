@@ -1,4 +1,4 @@
-<!--Modified by Cynthia Lai 10/05/2022--> 
+<!--Modified by Cynthia Lai 20/05/2022--> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,59 +12,59 @@
 </head>
 <body>
   <div class="container-fluid">
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="home.html">
-          AAC
-        </a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="home.html">HOME</a></li>
-          <li><a href="archive.html">ARCHIVE</a></li>
-          <li><a href="news.html">NEWS</a></li>
-          <li><a href="login.html">LOGIN</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-  <div class="container-fluid text-center">
-    <h1 class="text-left">Past sermon recordings</h1>
-    <form class="form-inline">
-      <div class="input-group">
-        <input type="search" name="query" value="" class="form-control" size="1000" placeholder="Sermon name or date" required>
-        <div class="input-group-btn">
-          <button type="button" class="btn btn-danger">Search</button>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="home.html">
+            AAC
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="archive.html">ARCHIVE</a></li>
+            <li><a href="news.html">NEWS</a></li>
+            <li><a href="login.html">LOGIN</a></li>
+          </ul>
         </div>
       </div>
-    </form>
-    <div id="res"></div>
-  </div>
+    </nav>
+  
+    <div class="container-fluid text-center">
+      <h1 class="text-left">Past sermon recordings</h1>
+      <form class="form-inline">
+        <div class="input-group">
+          <input type="search" name="query" value="" class="form-control" size="1000" placeholder="Sermon name or date" required>
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-danger">Search</button>
+          </div>
+        </div>
+      </form>
+      <div id="res"></div>
+    </div>
 
-  <script>
-    let f = $('.form-inline');
+    <script>
+      let f = $('.form-inline');
 
-    $('.btn').click(() => {
-      let data = f.serialize();
-      
-      $.ajax({
-        url: "/archive", 
-        method: "POST",
-        data: data,
+      $('.btn').click(() => {
+        let data = f.serialize();
+        
+        $.ajax({
+          url: "/archive", 
+          method: "POST",
+          data: data,
 
-        success: function (_data) {
-          $("#res").text(_data);
-        }
+          success: function (_data) {
+            $("#res").text(_data);
+          }
+        });
       });
-    });
-  </script>
-</div>
+    </script>
+  </div>
 </body>
 </html>

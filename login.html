@@ -1,19 +1,19 @@
-<!--Modified by Cynthia Lai 10/05/2022-->
+<!--Modified by Cynthia Lai 20/05/2022-->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Login</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-  </head>
-  <body>
-    <div class="loginForm">
-      <div class="container">
-        <div class="row">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+<body>
+  <div class="loginForm">
+    <div class="container">
+      <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <div class="panel panel-login">
             <div class="panel-heading">
@@ -22,7 +22,7 @@
                   <a href="#" class="active" id="login-form-link">Login</a>
                 </div>
                 <div class="col-xs-6">
-                  <a href="#" id="register-form-link">Register</a>
+                <a href="#" id="register-form-link">Register</a>
                 </div>
               </div>
               <hr>
@@ -85,26 +85,26 @@
       </div>
     </div>
   </div>
-  </body>
+</body>
 </html>
 
 <script>
-$(function() {
+  $(function() {
 
-$('#login-form-link').click(function(e) {
-$("#login-form").delay(100).fadeIn(100);
- $("#register-form").fadeOut(100);
-$('#register-form-link').removeClass('active');
-$(this).addClass('active');
-e.preventDefault();
-});
-$('#register-form-link').click(function(e) {
-$("#register-form").delay(100).fadeIn(100);
- $("#login-form").fadeOut(100);
-$('#login-form-link').removeClass('active');
-$(this).addClass('active');
-e.preventDefault();
-});
+  $('#login-form-link').click(function(e) {
+  $("#login-form").delay(100).fadeIn(100);
+  $("#register-form").fadeOut(100);
+  $('#register-form-link').removeClass('active');
+  $(this).addClass('active');
+  e.preventDefault();
+  });
+  $('#register-form-link').click(function(e) {
+  $("#register-form").delay(100).fadeIn(100);
+  $("#login-form").fadeOut(100);
+  $('#login-form-link').removeClass('active');
+  $(this).addClass('active');
+  e.preventDefault();
+  });
 
-});
+  });
 </script>

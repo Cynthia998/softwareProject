@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT | "8080";
 const parentDirectory = path.resolve(__dirname, '..');
 
-const uri = "mongodb+srv://sn1p3r:Lazystamp57@howdoesthiswork.p7dya.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://3cinnamon12:Aac-1995@aac.kkvbf.mongodb.net/?retryWrites=true&w=majority";
 const client = mongo.MongoClient;
 
 /*client.connect(uri, function (err, db) {
