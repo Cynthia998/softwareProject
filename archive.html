@@ -69,19 +69,20 @@
           method: "POST",
           data: data,
 
-        beforeSend: () => {
-          $(".loader").css("display", "block");
-          $("#res").empty();
-        },
+          beforeSend: () => {
+            $(".loader").css("display", "block");
+            $("#res").empty();
+          },
 
-        success: (_data) => {
-          $(".loader").css("display", "none");
-          if (_data) {
-            $('#res').append(`<audio controls><source src="data:audio/mp3;base64,${_data}" type="audio/mp3"></audio>`);
-          } else {
-            $('#res').append(`<p> Could not find a sermon which matches your request, we suggest entering phrases like: lord, faith, holiness, and leadeship :) </p>`);
+          success: (_data) => {
+            $(".loader").css("display", "none");
+            if (_data) {
+              $('#res').append(`<audio controls><source src="data:audio/mp3;base64,${_data}" type="audio/mp3"></audio>`);
+             } else {
+              $('#res').append(`<p> Could not find a sermon which matches your request, we suggest entering phrases like: lord, faith, holiness, and leadeship :) </p>`);
+            }
           }
-        }
+        });
       });
     </script>
   </div>
