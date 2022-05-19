@@ -2,6 +2,7 @@ const fs = require("fs");
 const mongo = require("mongodb");
 const path = require("path");
 
+/* INSERT YOUR MONGODB LINK */
 const uri = "mongodb+srv://sn1p3r:Lazystamp57@howdoesthiswork.p7dya.mongodb.net/?retryWrites=true&w=majority";
 const client = mongo.MongoClient;
 const grid = mongo.GridFSBucket;
@@ -9,6 +10,7 @@ const grid = mongo.GridFSBucket;
 client.connect(uri, (err, database) => {
     if (err) throw err;
 
+    /* INSERT YOUR DATABASE */
     const db = database.db("sample_airbnb");
     const gridfs = new grid(db);
 
@@ -19,7 +21,7 @@ client.connect(uri, (err, database) => {
         }
 
         files.forEach(async (file, _index) => {
-            if (/.*.html/.test(file)) {
+            if (/.*.mp3/.test(file)) {
 
                 await uploadFile(gridfs, path.resolve(file)).then((done) => {
                     if (done) {
