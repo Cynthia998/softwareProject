@@ -2,10 +2,7 @@ const fs = require("fs");
 const mongo = require("mongodb");
 const path = require("path");
 
-<<<<<<< Updated upstream
 /* INSERT YOUR MONGODB LINK */
-=======
->>>>>>> Stashed changes
 const uri = "mongodb+srv://3cinnamon12:Aac-1995@aac.kkvbf.mongodb.net/?retryWrites=true&w=majority";
 const client = mongo.MongoClient;
 const grid = mongo.GridFSBucket;
@@ -13,10 +10,7 @@ const grid = mongo.GridFSBucket;
 client.connect(uri, (err, database) => {
     if (err) throw err;
 
-<<<<<<< Updated upstream
     /* INSERT YOUR DATABASE */
-=======
->>>>>>> Stashed changes
     const db = database.db("sermons");
     const gridfs = new grid(db);
 
