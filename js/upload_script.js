@@ -10,7 +10,6 @@ const grid = mongo.GridFSBucket;
 client.connect(uri, (err, database) => {
     if (err) throw err;
 
-    /* INSERT YOUR DATABASE */
     const db = database.db("sample_airbnb");
     const gridfs = new grid(db);
 
