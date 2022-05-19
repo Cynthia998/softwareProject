@@ -2,7 +2,6 @@ const fs = require("fs");
 const mongo = require("mongodb");
 const path = require("path");
 
-/* INSERT YOUR MONGODB LINK */
 const uri = "mongodb+srv://3cinnamon12:Aac-1995@aac.kkvbf.mongodb.net/?retryWrites=true&w=majority";
 const client = mongo.MongoClient;
 const grid = mongo.GridFSBucket;
@@ -10,12 +9,7 @@ const grid = mongo.GridFSBucket;
 client.connect(uri, (err, database) => {
     if (err) throw err;
 
-<<<<<<< HEAD
-    const db = database.db("sample_airbnb");
-=======
-    /* INSERT YOUR DATABASE */
     const db = database.db("sermons");
->>>>>>> 470c1b40fc06c1804b96376b6eb35f1ac5a8c725
     const gridfs = new grid(db);
 
     fs.readdir('./', (error, files) => {
