@@ -20,7 +20,7 @@ app.use(express.static(parentDirectory));
 app.use(express.urlencoded());
 
 fs.readdir(parentDirectory, (err, files) => {
-    if (err) {
+    if (err) {w
         console.log(`Could not list directory: ${parentDirectory}`);
         process.exit(1);
     }
