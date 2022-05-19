@@ -49,11 +49,5 @@ function uploadFile (gfs, _path) {
                 return reject(`Failed to upload file`);
             }
         });
-        const filename = buf.toString('hex') + path.extname(file.originalname);
-        const fileInfo = {
-            filename: "C:\Users\cynth\Desktop\sermons\EN\1Thessalonians\20160911-1Thess5.1-11_The_day_of_the_Lord-EN.mp3",
-            db: 'sermons',
-            metadata: '2016 Thessalonians: The day of the Lord'
-        };
     });
 }
