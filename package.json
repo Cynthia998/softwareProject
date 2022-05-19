@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "nodemon ./js/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./js/index.js"
+    "start": "node ./bin/www"
   },
   "author": "Cynthia Lai",
   "license": "ISC",

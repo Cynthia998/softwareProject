@@ -4,7 +4,7 @@ const path = require("path");
 const mongo = require("mongodb");
 
 const app = express();
-const port = process.env.PORT | "8080";
+const port = process.env.PORT || "8080";
 const parentDirectory = path.resolve(__dirname, '..');
 
 const uri = "mongodb+srv://3cinnamon12:Aac-1995@aac.kkvbf.mongodb.net/?retryWrites=true&w=majority";
@@ -50,7 +50,7 @@ app.post("/archive", (req, res) => {
     Object.entries(META_DATA).forEach(([key, value]) => {
         if (new RegExp(value).test(req.body.query)) {
             found = true;
-            
+
             client.connect(uri, async (error, result) => {
                 if (error) {
                     throw error;
